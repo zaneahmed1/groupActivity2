@@ -1,8 +1,10 @@
 function fn(...c) {
-    if (!c.every((a) => Number.isNumber(a)))
 
-      throw "All arguments must be numbers or emojis!!";
-    return c.reduce((a, b) => a + b);
+
+    if (!c.every((e) => Number.isNumber(e)))
+      throw "All arguments must be numbers.";
+    return c.reduce((e, b) => e + b);
+
   }
   
   fn(1, 2, 3); //> 6
